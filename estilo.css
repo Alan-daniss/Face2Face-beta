@@ -1,0 +1,267 @@
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #1E293B;
+}
+
+.principio{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.text-left{
+    color: #10B991;
+    margin-left: 15px;
+}
+
+.text-center{
+    color: #FFFFFF;
+}
+
+.text-right{
+    color: #EF4444
+}
+
+.version{
+    margin-left: 20px;
+    color: #82fbff;
+}
+
+.pag{
+    color: #FFFFFF;
+    margin-right: 15px;
+}
+
+.content-prin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.boton{
+    display: none;
+
+}
+
+.tarjeta{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border: 4px solid #EF4444;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border 0.3s;
+    width: 300px;
+    background-color: #2a2a2a;
+    padding-bottom: 29px;
+    transition: filter .2s;
+    transition: all 0.3s ease 0s;
+}
+
+.tarjeta:hover{
+    transform: translateY(-7px);
+    box-shadow: 0px 15px 20px rgba(235, 3, 3, 0.767);
+}
+
+.tarjeta::after{
+    box-shadow: 0px 15px 20px rgba(3, 235, 61, 0.767);
+
+}
+
+.nombre{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin:30px 0 0 180px;
+    font-size: 20px;
+    color: #FFFFFF;
+
+}
+
+.boton:checked + .tarjeta{
+    border-color: #00ff7f;
+    box-shadow: 0 0 15px #00ff7f;
+    background-color: #00ff7f;
+}
+
+.tarjeta img{
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.guardado{
+appearance: button;
+background-color: #008A41;
+border: solid transparent;
+border-radius: 16px;
+border-width: 0 0 4px;
+box-sizing: border-box;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-size: 15px;
+font-weight: 700;
+letter-spacing: .8px;
+line-height: 20px;
+margin: 0;
+outline: none;
+overflow: visible;
+padding: 13px 19px;
+text-align: center;
+text-transform: uppercase;
+touch-action: manipulation;
+transform: translateZ(0);
+transition: filter .2s;
+user-select: none;
+-webkit-user-select: none;
+vertical-align: middle;
+white-space: nowrap;
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+
+}
+
+.guardado:after {
+background-clip: padding-box;
+background-color: #008000;
+border: solid transparent;
+border-radius: 16px;
+border-width: 0 0 4px;
+bottom: -4px;
+content: "";
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+z-index: -1;
+}
+
+.guardado:hover{
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.guardado:main, .comenzar:focus {
+user-select: auto;
+}
+
+.guardado:hover:not(:disabled) {
+filter: brightness(1.1);
+}
+
+.guadado:disabled {
+cursor: auto;
+}
+
+.guardado:active:after {
+border-width: 0 0 0px;
+}
+
+.guardado:active {
+transform: translateY(-1px);
+padding-bottom: 10px;
+}
+
+.sig-pag{
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.bot-pag {
+position: relative;
+border: none;
+background: transparent;
+padding: 0;
+cursor: pointer;
+outline-offset: 4px;
+transition: filter 250ms;
+user-select: none;
+touch-action: manipulation;
+}
+
+.shadow {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 12px;
+background: hsl(0deg 0% 0% / 0.25);
+will-change: transform;
+transform: translateY(2px);
+transition: transform
+600ms
+cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 12px;
+background: linear-gradient(
+to left,
+hsl(340deg 100% 16%) 0%,
+hsl(340deg 100% 32%) 8%,
+hsl(340deg 100% 32%) 92%,
+hsl(340deg 100% 16%) 100%
+);
+}
+
+.front {
+display: block;
+position: relative;
+padding: 12px 27px;
+border-radius: 12px;
+font-size: 1.1rem;
+color: white;
+background: hsl(345deg 100% 47%);
+will-change: transform;
+transform: translateY(-4px);
+transition: transform
+600ms
+cubic-bezier(.3, .7, .4, 1);
+}
+
+.bot-pag:hover {
+filter: brightness(110%);
+}
+
+.bot-pag:hover .front {
+transform: translateY(-6px);
+transition: transform
+250ms
+cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.bot-pag:active .front {
+transform: translateY(-2px);
+transition: transform 34ms;
+}
+
+.bot-pag:hover .shadow {
+transform: translateY(4px);
+transition: transform
+250ms
+cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.bot-pag:active .shadow {
+transform: translateY(1px);
+transition: transform 34ms;
+}
+
+.bot-pag:focus:not(:focus-visible) {
+outline: none;
+}
