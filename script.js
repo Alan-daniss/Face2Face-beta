@@ -4,7 +4,9 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 window.addEventListener("load", () => {
-    hideLoader();
+    setTimeout(() => {
+        hideLoader();
+    }, 200);
 })
 
 const loader = document.getElementById("loaderPagina");
