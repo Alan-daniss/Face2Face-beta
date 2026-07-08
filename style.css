@@ -16,6 +16,13 @@ html{
 
 /*EJEMPLO*/
 
+.contenedor{
+    width: 100%;
+    max-width: 1400px;
+    margin:0 auto;
+    overflow: hidden;
+}
+
 .section_loader{
     position: fixed;
     left: 0;
@@ -250,4 +257,10 @@ padding-bottom: 10px;
     transform: translateY(-20px);
     transition: filter .2s;
     transition: all 0.3s ease 0s;
+}
+
+@media screen and (max-width: 500px){
+    .contenedor{
+        width: 100%;
+    }
 }

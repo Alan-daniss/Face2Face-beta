@@ -16,6 +16,13 @@ html{
 
 /*EJEMPLO*/
 
+.contenedor{
+    width: 100%;
+    max-width: 1400px;
+    margin:0 auto;
+    overflow: hidden;
+}
+
 .section_loader{
     position: fixed;
     left: 0;
@@ -361,4 +368,11 @@ transition: transform 34ms;
 
 .bot-pag:focus:not(:focus-visible) {
 outline: none;
+}
+
+
+@media screen and (max-width: 500px){
+    .contenedor{
+        width: 100%;
+    }
 }
