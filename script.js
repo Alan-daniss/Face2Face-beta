@@ -43,12 +43,13 @@ const votoGuardado = localStorage.getItem('voto_' + paginaActual);
 if (votoGuardado) {
 const radioElegido = document.getElementById(votoGuardado);
 if (radioElegido) radioElegido.checked = true;
-inputs.forEach(input => input.disabled = true);
-const btnSiguiente = document.querySelector('.bot-pag-siguiente');
-if(btnSiguiente) btnSiguiente.disabled = false;
+inputs.forEach(input => {
+    input.disabled = true;
+});
+
 if (btnGuardar) {
 btnGuardar.disabled = true;
-btnGuardar.innerText = "¡Ya guardado!";
+btnGuardar.innerText = "\u2713";
 }
 }
 
@@ -103,7 +104,9 @@ if (resMexico) resMexico.innerText = `${totalMexico} respuestas México`;
 if (resInglaterra) resInglaterra.innerText = `${totalInglaterra} respuestas Inglaterra`;
 
 // 5. Determinar Ganador y pintar el círculo
+const bandera=document.getElementById('bandera-ganadora')
 if (porcentajeMexico > porcentajeInglaterra) {
+bandera.src ="img-finalVersion/banderaMexico.jpg"
 titulo.innerText = "¡Le vas a México!";
 titulo.style.color = "#10B991"; // Verde
 textoPorcentaje.innerText = `${porcentajeMexico}%`;
@@ -111,6 +114,7 @@ textoPais.innerText = "México";
 grafico.style.background = `conic-gradient(#10B991 ${porcentajeMexico}%, #333 0)`;
 
 } else if (porcentajeInglaterra > porcentajeMexico) {
+bandera.src = "img-finalVersion/banderaEng.jpg"
 titulo.innerText = "¡Le vas a Inglaterra!";
 titulo.style.color = "#EF4444"; // Rojo
 textoPorcentaje.innerText = `${porcentajeInglaterra}%`;
@@ -135,6 +139,35 @@ function limpiarEncuesta (){
         }
     }
 }
+
+function actualizarBarraProgreso() {
+const paginaActual = window.location.pathname;
+const barra = document.getElementById('barraProg');
+const texto = document.getElementById('pag');
+
+// Mapeo: ¿En qué página estamos?
+// Ajusta los nombres de tus archivos si son distintos
+const mapeo = {
+"/preguntas1.html": { porcentaje: "20%", texto: "1/5" },
+"/preguntas2.html": { porcentaje: "40%", texto: "2/5" },
+"/preguntas3.html": { porcentaje: "60%", texto: "3/5" },
+"/preguntas4.html": { porcentaje: "80%", texto: "4/5" },
+"/preguntas5.html": { porcentaje: "100%", texto: "5/5" }
+};
+
+// Buscamos la configuración según la página
+const info = Object.keys(mapeo).find(key => paginaActual.includes(key));
+
+if (info && barra) {
+barra.style.width = mapeo[info].porcentaje;
+texto.innerText = mapeo[info].texto;
+}
+}
+
+// Llamar a la función dentro de tu DOMContentLoaded principal
+// (Asegúrate de ponerla donde ya tienes tus otras llamadas)
+actualizarBarraProgreso();
+
 
 /*logica principal*/
 
