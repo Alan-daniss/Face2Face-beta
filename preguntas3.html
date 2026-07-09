@@ -8,6 +8,12 @@
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
+     <div id="loaderPagina" class="section_loader">
+        <div class="loader">
+            <div class="loader_1"></div>
+            <div class="loader_2"></div>
+        </div>
+    </div>
     <div class="principio">
         <h2>
             <span class="text-left">Face</span><span class="text-center">2</span><span class="text-right">Face</span><span class="version">(Beta)</span>
@@ -16,19 +22,19 @@
     </div>
     <div class="content-prin">
         <h2>¿Qué prefieres?</h2>
-        <input type="radio" name="prefiere" id="cdmx" class="boton">
+        <input type="radio" name="prefiere" id="cdmx" class="boton" value="mexico">
         <label for="cdmx" class="tarjeta">
             <img src="img-finalVersion/cdMX.JPG" alt="ciudad de mexico" class="img_int">
             <span class="nombre">Ciudad De México</span>
         </label>
         <h2>O</h2>
-        <input type="radio" name="prefiere" id="londres" class="boton">
+        <input type="radio" name="prefiere" id="londres" class="boton" value="inglaterra">
         <label for="londres" class="tarjeta">
             <img src="img-finalVersion/loNdres.JPG" alt="ciudad de londres" class="img_int">
             <span class="nombre">Londres</span>
         </label>
 
-        <button class="guardado">Guardar</button>
+        <button id="botonGuardar" class="guardado">Guardar</button>
     </div>
 
     <div class="sig-pag">
@@ -47,5 +53,6 @@
             </button>
         </a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

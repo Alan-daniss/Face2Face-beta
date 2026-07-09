@@ -376,3 +376,54 @@ outline: none;
         width: 100%;
     }
 }
+
+
+.grafico-circular {
+width: 250px;
+height: 250px;
+border-radius: 50%;
+/* Empieza gris por defecto, JS cambiará esto */
+background: conic-gradient(#333 100%, #333 0);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+position: relative;
+margin-top: 30px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* El círculo del centro para hacer el efecto de "anillo" */
+.grafico-circular::before {
+content: "";
+width: 200px; /* Más pequeño que el contenedor principal */
+height: 200px;
+border-radius: 50%;
+background-color: #1E293B; /* El color de fondo azul oscuro de tu app */
+position: absolute;
+}
+
+/* Textos dentro del círculo */
+.grafico-circular span {
+position: relative;
+z-index: 1;
+color: white;
+}
+
+.porcentaje {
+font-size: 55px;
+font-weight: bold;
+}
+
+.label {
+font-size: 22px;
+margin-top: 5px;
+color: #ccc;
+}
+
+.bot-pag:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(0%);
+}

@@ -8,12 +8,48 @@
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
+    <div id="loaderPagina" class="section_loader">
+        <div class="loader">
+            <div class="loader_1"></div>
+            <div class="loader_2"></div>
+    </div>
+    </div>
     <div class="principio">
         <h2>
-            <span class="text-left">Face</span><span class="text-center">2</span><span class="text-right">Face</span><span class="version">(Beta)</span>
+        <span class="text-left">Face</span><span class="text-center">2</span><span class="text-right">Face</span><span class="version">(Beta)</span>
         </h2>
-        <h2 class="pag">Resultado</h2>
     </div>
 
+    <div class="content-prin">
+        <h1 id="titulo-ganador" style="color: #fff; text-align: center; margin-top: 20px;">¡Calculando...</h1>
+
+        <div class="grafico-circular" id="grafico">
+                <span class="porcentaje" id="texto-porcentaje">0%</span>
+                <span class="label" id="texto-pais">...</span>
+        </div>
+
+    <div class="detalles-votos" style="margin-top: 40px; text-align: center;">
+        <p id="res-mexico" style="color: #10B991; margin-bottom: 15px; font-size: 20px; font-weight: bold;">0 respuestas México</p>
+        <p id="res-inglaterra" style="color: #EF4444; font-size: 20px; font-weight: bold;">0 respuestas Inglaterra</p>
+    </div>
+
+    <div class="sig-pag" style="margin-top: 40px;">
+        <a href="index.html">
+            <button class="bot-pag">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text">Volver al Inicio</span>
+            </button>
+        </a>
+    </div>
+</div>
+
+    
+    
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>

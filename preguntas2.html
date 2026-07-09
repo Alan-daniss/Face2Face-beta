@@ -8,6 +8,12 @@
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
+     <div id="loaderPagina" class="section_loader">
+        <div class="loader">
+            <div class="loader_1"></div>
+            <div class="loader_2"></div>
+        </div>
+    </div>
     <div class="principio">
         <h2>
             <span class="text-left">Face</span><span class="text-center">2</span><span class="text-right">Face</span><span class="version">(Beta)</span>
@@ -16,19 +22,19 @@
     </div>
     <div class="content-prin">
         <h2>¿Qué prefieres?</h2>
-        <input type="radio" name="prefiere" id="fish_chips" class="boton">
+        <input type="radio" name="prefiere" id="fish_chips" class="boton" value="inglaterra">
         <label for="fish_chips" class="tarjeta">
             <img src="img-finalVersion/fis_chips.JPG" alt="plato fish chips" class="img_int">
             <span class="nombre">Fish And Chips</span>
         </label>
         <h2>O</h2>
-        <input type="radio" name="prefiere" id="tacos" class="boton">
+        <input type="radio" name="prefiere" id="tacos" class="boton" value="mexico">
         <label for="tacos" class="tarjeta">
             <img src="img-finalVersion/tacos_mx.JPG" alt="comida tacos" class="img_int">
             <span class="nombre">Tacos</span>
         </label>
 
-        <button class="guardado">Guardar</button>
+        <button id="botonGuardar" class="guardado">Guardar</button>
     </div>
 
     <div class="sig-pag">
@@ -47,5 +53,6 @@
             </button>
         </a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

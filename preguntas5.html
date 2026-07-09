@@ -8,6 +8,12 @@
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
+    <div id="loaderPagina" class="section_loader">
+        <div class="loader">
+            <div class="loader_1"></div>
+            <div class="loader_2"></div>
+        </div>
+    </div>
     <div class="principio">
         <h2>
             <span class="text-left">Face</span><span class="text-center">2</span><span class="text-right">Face</span><span class="version">(Beta)</span>
@@ -16,7 +22,7 @@
     </div>
     <div class="content-prin">
         <h2>¿Qué prefieres?</h2>
-        <input type="radio" name="prefiere" id="mexico_c" class="boton">
+        <input type="radio" name="prefiere" id="mexico_c" class="boton" value="mexico">
         <label for="mexico_c" class="tarjeta">
             <img src="img-finalVersion/camMex.JPG" alt="seleccion Mex" class="img_int">
             <span class="nombre">México Campeón</span>
@@ -24,11 +30,11 @@
         <h2>O</h2>
         <input type="radio" name="prefiere" id="eng_c" class="boton">
         <label for="eng_c" class="tarjeta">
-            <img src="img-finalVersion/camEng.JPG" alt="seleccion eng" class="img_int">
+            <img src="img-finalVersion/camEng.JPG" alt="seleccion eng" class="img_int" value="inglaterra">
             <span class="nombre">Inglaterra Campeón</span>
         </label>
 
-        <button class="guardado">Guardar</button>
+        <button id="botonGuardar" class="guardado">Guardar</button>
     </div>
 
     <div class="sig-pag">
@@ -47,5 +53,6 @@
             </button>
         </a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

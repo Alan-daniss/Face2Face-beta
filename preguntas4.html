@@ -8,6 +8,12 @@
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
+    <div id="loaderPagina" class="section_loader">
+        <div class="loader">
+            <div class="loader_1"></div>
+            <div class="loader_2"></div>
+        </div>
+    </div>
     <div class="principio">
         <h2>
             <span class="text-left">Face</span><span class="text-center">2</span><span class="text-right">Face</span><span class="version">(Beta)</span>
@@ -16,7 +22,7 @@
     </div>
     <div class="content-prin">
         <h2>¿Qué prefieres?</h2>
-        <input type="radio" name="prefiere" id="harry_k" class="boton">
+        <input type="radio" name="prefiere" id="harry_k" class="boton" value="inglaterra">
         <label for="harry_k" class="tarjeta">
             <img src="img-finalVersion/hKaneFV.PNG" alt="harry kane" class="img_int">
             <span class="nombre">Harry Kane</span>
@@ -24,11 +30,11 @@
         <h2>O</h2>
         <input type="radio" name="prefiere" id="hugo_s" class="boton">
         <label for="hugo_s" class="tarjeta">
-            <img src="img-finalVersion/HugoS.PNG" alt="Hugo Sanchez" class="img_int">
+            <img src="img-finalVersion/HugoS.PNG" alt="Hugo Sanchez" class="img_int" value="mexico">
             <span class="nombre">Hugo Sánchez</span>
         </label>
 
-        <button class="guardado">Guardar</button>
+        <button id="botonGuardar" class="guardado">Guardar</button>
     </div>
 
     <div class="sig-pag">
@@ -47,5 +53,6 @@
             </button>
         </a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

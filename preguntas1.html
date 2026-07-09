@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0, minimum-scalable=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Face2Face</title>
     <link rel="stylesheet" href="estilo.css">
     <link href="https://googleapis.com" rel="stylesheet">
@@ -23,21 +23,21 @@
         </h2>
         <h2 class="pag">1/5</h2>
     </div>
-    <div class="content-prin">
+    <div id="contenedorRadios"class="content-prin">
         <h2>¿Qué prefieres?</h2>
-        <input type="radio" name="prefiere" id="juan-gabriel" class="boton">
+        <input type="radio" name="prefiere" id="juan-gabriel" class="boton" value="mexico">
         <label for="juan-gabriel" class="tarjeta">
             <img src="img-finalVersion/JGFV.PNG" alt="juangabriel" class="img_int">
             <span class="nombre">Juan Gabriel</span>
         </label>
         <h2>O</h2>
-        <input type="radio" name="prefiere" id="elton" class="boton">
+        <input type="radio" name="prefiere" id="elton" class="boton" value="inglaterra">
         <label for="elton" class="tarjeta">
             <img src="img-finalVersion/EltonJ.PNG" alt="elton-foto" class="img_int">
             <span class="nombre">Elton John</span>
         </label>
 
-        <button class="guardado">Guardar</button>
+        <button id="botonGuardar" class="guardado">Guardar</button>
     </div>
 
     <div class="sig-pag">
@@ -56,7 +56,7 @@
             </button>
         </a>
     </div>
-    <script src="script.js"></script>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
